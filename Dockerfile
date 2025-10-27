@@ -2,7 +2,6 @@ FROM python:3.8-slim-bullseye
 
 COPY . /app
 WORKDIR /app
-
 # Install dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     awscli \
