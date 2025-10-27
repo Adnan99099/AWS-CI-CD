@@ -1,9 +1,4 @@
-FROM python:3.8-slim-buster
-
-# Update sources list to use archive repositories
-RUN sed -i s/deb.debian.org/archive.debian.org/g /etc/apt/sources.list && \
-    sed -i 's|security.debian.org|archive.debian.org/|g' /etc/apt/sources.list && \
-    sed -i '/stretch-updates/d' /etc/apt/sources.list
+FROM python:3.8-slim-bullseye
 WORKDIR /app
 COPY . /app
 COPY . /app
